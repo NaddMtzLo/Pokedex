@@ -9,6 +9,8 @@
     position: relative;
     width: min(800px, 100%);
     text-align: center;
+    border: 1px solid #D3D3D3;
+    box-shadow: 0px 2px 16px rgba(0, 0 , 0, 0.15);
 }
 
 .pokemonId_header {
@@ -17,6 +19,8 @@
     height: 160px;
     width: 100%;
     background-color: blue;
+    margin: 5px;
+    width: calc(100% - 10px);
 }
 
 .pokemonId_img {
@@ -67,8 +71,13 @@
     width: max(45%, 300px);
 }
 
+.pokemonId_info-container:first-child {
+    color: white;
+}
+
 .pokemonId_info-title {
     margin-bottom: 0;
+    color: #030706;
 }
 
 .pokemonId_info-data {
@@ -85,3 +94,94 @@
     font-weight: bold;
     font-size: 14px;
 }
+
+.pokemonId_stats {
+    padding: 0 25px 30px 25px;
+}
+
+.pokemonId_stats-title {
+    text-align: left;
+}
+
+.pokemonId_stat-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pokemonId_stats-name {
+    text-transform: capitalize;
+}
+
+.pokemonId_stat-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #f6f6f6;
+}
+
+.pokemonId_stat-barProgress {
+    background: linear-gradient(90deg, #FCD676, #E6901E);
+    height: 20px;
+    width: 60%;
+}
+
+/* Background types */
+.bg-normal {
+    background: 10px solid #735259;
+  }
+  .bg-fighting {
+    background: 10px solid #96402A;
+  }
+  .bg-flying {
+    background: 10px solid #beb14c;
+  }
+  .bg-poison {
+    background: 10px solid #5B3184;
+  }
+  .bg-ground {
+    background: 10px solid #654008;
+  }
+  .bg-rock {
+    background: 10px solid #7E7E7E;
+  }
+  .bg-bug {
+    background: 10px solid #E52D2D;
+  }
+  .bg-ghost {
+    background: 10px solid #323569;
+  }
+  .bg-steel {
+    background: 10px solid #5E736C;
+  }
+  .bg-fire {
+    background: 10px solid #F96D6F;
+  }
+  .bg-water {
+    background: 10px solid #133258;
+  }
+  .bg-grass {
+    background: 10px solid #7EC6C5;
+  }
+  .bg-electric {
+    background: 10px solid #0C1395;
+  }
+  .bg-psychic {
+    background: 10px solid #E52D2D;
+  }
+  .bg-ice {
+    background: 10px solid #6FBEDF;
+  }
+  .bg-dragon {
+    background: 10px solid #478A93;
+  }
+  .bg-dark {
+    background: 10px solid #030706;
+  }
+  .bg-fairy {
+    background: 10px solid #971B45;
+  }
+  .bg-unknown {
+    background: 10px solid #696767;
+  }
+  .bg-shadow {
+    background: 10px solid #6c31a3;
+  }

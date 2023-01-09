@@ -8,6 +8,11 @@ const Pokemon = () => {
 
   const {id} = useParams()
 
+  const getPercentBarProgress = (valueStat) => {
+    const maxValue = 150
+      return `${(valueStat * 100) / maxValue}%`
+  }
+
   useEffect(() => {
     const URL = `https://pokeapi.co/api/v2/pokemon/${id}/`
     axios.get(URL)
@@ -20,7 +25,7 @@ const Pokemon = () => {
   return (
     <main className='Pokemon'>
       <section className='pokemonId'>
-        <section className='pokemonId_header'></section>
+        <section className={`pokemonId_header bg-lg-${dataPokemon?.types[0].type.name}`}></section>
         <img className='pokemonId_img' src={dataPokemon?.sprites.other["official-artwork"].front_default} alt="" />
         <h3 className='pokemonId_id'># {dataPokemon?.id}</h3>
         <h2 className='pokemonId_name'>{dataPokemon?.name}</h2>
@@ -40,7 +45,7 @@ const Pokemon = () => {
             <h4 className='pokemonId_info-title'>Types</h4>
             <div className='pokemonId_info-data'>
               {
-                dataPokemon?.types.map(type => <p className='pokemonId_info-value' key={type.type.name}>
+                dataPokemon?.types.map(type => <p className= {`pokemonId_info-value bg-${type.type.name}`} key={type.type.name}>
                   {type.type.name}</p>)
               }
             </div>
@@ -67,7 +72,7 @@ const Pokemon = () => {
                     <p className='pokemonId_stat-value'>{stat.base_stat}</p>
                   </div>
                   <div className='pokemonId_stat-bar'>
-                    <div className='pokemonId_stat-barProgress'></div>
+                    <div style={{width: getPercentBarProgress(stat.base_stat)}} className='pokemonId_stat-barProgress'></div>
                   </div>
                 </div>
               ))
