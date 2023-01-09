@@ -1,0 +1,21 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home_img {
+    padding: 10px;
+    max-width: 450px;
+}
+
+.home_subtitle {
+    color: var(--color-red);
+    margin-bottom: 0;
+}
+
+.home_text {
+    margin-top: 0;
+}
