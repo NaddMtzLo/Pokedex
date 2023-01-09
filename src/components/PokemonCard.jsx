@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import "./styles/PokemonCard.css"
 
 const PokemonCard = ({pokemon}) => {

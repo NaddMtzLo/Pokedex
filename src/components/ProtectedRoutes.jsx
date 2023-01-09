@@ -7,7 +7,7 @@ const ProtectedRoutes = () => {
     if (trainersName) {
         return <Outlet/>
     } else {
-        <Navigate to="/"/>
+        return <Navigate to="/"/>
         }
     }
 
